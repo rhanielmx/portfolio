@@ -13,6 +13,16 @@ import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { projects } from "@/data/projects";
 
+function getInitials(title: string) {
+  const words = title.split(" ");
+  if (words.length === 1) return title.slice(0, 2).toUpperCase();
+  return words
+    .slice(0, 2)
+    .map((w) => w[0])
+    .join("")
+    .toUpperCase();
+}
+
 const previewVariants = {
   primary: "bg-primary",
   secondary: "bg-secondary",
@@ -36,10 +46,13 @@ export function ProjectDetail() {
       }}
     >
       {project && (
-        <DialogContent className="sm:max-w-[560px]">
+        <DialogContent className="sm:max-w-140">
           <div
-            className={`${previewVariants[project.previewColor]} -mx-6 -mt-6 mb-0 h-48 flex items-center justify-center rounded-t-lg`}
+            className={`${previewVariants[project.previewColor]} -mx-6 -mt-6 mb-0 h-48 flex flex-col items-center justify-center gap-2 rounded-t-lg`}
           >
+            <span className="text-5xl font-bold tracking-tight text-white/90 drop-shadow-sm">
+              {getInitials(project.title)}
+            </span>
             <DialogTitle className="font-heading text-2xl text-white drop-shadow-sm sr-only">
               {project.title}
             </DialogTitle>

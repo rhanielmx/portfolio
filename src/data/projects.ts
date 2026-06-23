@@ -5,66 +5,70 @@ export interface Project {
   tags: string[];
   previewColor: "primary" | "secondary" | "accent";
   icon: string;
+  image?: string;
   liveUrl?: string;
   githubUrl?: string;
 }
 
 export const projects: Project[] = [
   {
-    title: "E-Commerce Platform",
-    description: "Full-stack marketplace com Next.js, Stripe e PostgreSQL.",
+    title: "MagFinance",
+    description: "Gestão de finanças pessoais com React, Fastify e PostgreSQL.",
     fullDescription:
-      "Plataforma completa de e-commerce com carrinho de compras, checkout integrado com Stripe, painel administrativo e gestão de estoque. Construída com foco em performance, SEO e experiência do usuário.",
-    tags: ["Next.js", "TypeScript", "Stripe"],
+      "Aplicação full-stack de finanças pessoais para organização doméstica, com dashboard, controle de contas fixas, transações, parcelamentos e planejamento mensal. Autenticação JWT, ORM Drizzle, validação Zod e deploy automatizado.",
+    tags: ["React", "TypeScript", "Fastify", "PostgreSQL", "Drizzle ORM"],
     previewColor: "primary",
-    icon: "shopping-cart",
+    icon: "wallet",
+    githubUrl: "https://github.com/rhanielmx/magfinance",
+    liveUrl: "https://magfinance.vercel.app",
   },
   {
-    title: "Task Manager App",
-    description:
-      "Aplicativo de gerenciamento de tarefas com kanban e colaboração.",
+    title: "Editor IPBIta",
+    description: "Editor de vídeos de culto com transcrição e classificação inteligente de segmentos.",
     fullDescription:
-      "Aplicativo colaborativo de gerenciamento de tarefas com quadro kanban drag-and-drop, atribuição de membros, comentários em tempo real via WebSocket e notificações push.",
-    tags: ["React", "Node.js", "Socket.io"],
+      "Aplicativo desktop em Tauri para edição e processamento inteligente de vídeos de culto e igreja. Pipeline completo com extração de áudio (FFmpeg), transcrição (faster-whisper), classificação de seções (louvor, oração, sermão, avisos) via keyword/SBERT/Ollama, detecção de versículos bíblicos, sugestão de capítulos, geração de Reels, timeline interativa com split/merge/drag, e exportação de vídeo/legendas. Arquitetura híbrida com sidecar Python para processamento pesado e fallback gracioso entre engines de IA.",
+    tags: ["Tauri", "React", "TypeScript", "Python", "Whisper", "Rust"],
     previewColor: "secondary",
-    icon: "list-todo",
+    icon: "video",
+    githubUrl: "https://github.com/rhanielmx/editor-ipbita",
   },
   {
-    title: "Weather Dashboard",
-    description:
-      "Dashboard climático com gráficos interativos e previsão por IA.",
+    title: "IPBIta Annotation Tool",
+    description: "Ferramenta de anotação de vídeos com transcrição Whisper e classificação semi-automatizada.",
     fullDescription:
-      "Dashboard que consome dados meteorológicos de múltiplas APIs, exibe gráficos interativos de temperatura/umidade/precipitação e usa modelo de ML para previsões personalizadas.",
-    tags: ["Python", "React", "D3.js"],
-    previewColor: "accent",
-    icon: "cloud-sun",
-  },
-  {
-    title: "Social Media API",
-    description: "API RESTful para rede social com autenticação e feed.",
-    fullDescription:
-      "API backend completa para rede social com autenticação JWT, posts, likes, comentários, seguidores, feed algorítmico e cache com Redis para alta performance.",
-    tags: ["Go", "PostgreSQL", "Redis"],
+      "Aplicação desktop para anotação manual e semi-automatizada de vídeos de cultos, com segmentação temporal, transcrição via faster-whisper, extração de features acústicas e textuais, treinamento de modelo classificador (Random Forest / XGBoost) e exportação de datasets. Interface React 19 + Tailwind v4 + Tauri v2 com sidecars Python para ML.",
+    tags: [
+      "React",
+      "TypeScript",
+      "Tauri",
+      "Rust",
+      "Python",
+      "faster-whisper",
+      "scikit-learn",
+      "Tailwind CSS",
+    ],
     previewColor: "primary",
-    icon: "users",
+    icon: "video",
+    githubUrl: "https://github.com/rhanielmx/ipbita-annotation-tool",
   },
   {
-    title: "Portfolio Generator",
-    description:
-      "Gerador de portfólios estáticos com temas customizáveis.",
-    fullDescription:
-      "Ferramenta CLI + web que gera sites de portfólio estáticos a partir de um arquivo de configuração YAML. Suporte a múltiplos temas, deploy integrado com GitHub Pages.",
-    tags: ["Astro", "Tailwind", "MDX"],
-    previewColor: "secondary",
-    icon: "layout-dashboard",
+    title: "pizza.shop",
+    description: "Painel administrativo para pizzarias com métricas e gestão de pedidos.",
+    fullDescription: "SPA moderna em React + TypeScript para donos de pizzaria acompanharem vendas, gerenciarem pedidos em tempo real e editarem o perfil do estabelecimento. Dashboard com gráficos de receita e produtos populares, tabela de pedidos com filtros, paginação e workflow completo (aprovar, despachar, entregar, cancelar). Cache otimista com React Query, tema dark/light, componentes acessíveis com Radix UI e validação com Zod.",
+    tags: ["React", "TypeScript", "TanStack Query", "Tailwind CSS", "shadcn/ui"],
+    previewColor: "primary",
+    icon: "pizza",
+    githubUrl: "https://github.com/rhanielmx/pizzashop-web",
+    liveUrl: ""
   },
   {
-    title: "AI Chat Interface",
-    description: "Interface de chat com IA usando LangChain e streaming.",
-    fullDescription:
-      "Interface moderna de chat com IA generativa utilizando LangChain para orquestração de modelos, streaming de respostas em tempo real, histórico de conversas e suporte a múltiplos provedores de LLM.",
-    tags: ["Next.js", "OpenAI", "WebSocket"],
-    previewColor: "accent",
-    icon: "message-circle",
-  },
+    title: "ITG Conecta",
+    description: "Sistema de chamados interno com Next.js 15, Prisma e SQLite.",
+    fullDescription: "Plataforma full-stack de gestão de chamados técnicos e administrativos para o Instituto Teológico Gamaliel (ITG). Dashboard com gráficos Recharts, RBAC com 3 papéis (USER, MANAGER, ADMIN), fluxo completo de tickets com categorias e prioridades, exportação para Excel, forçar troca de senha no primeiro acesso e TanStack Query para gerenciamento de estado.",
+    tags: ["Next.js", "React", "TypeScript", "Prisma", "SQLite", "Tailwind CSS", "NextAuth"],
+    previewColor: "primary",
+    icon: "ticket",
+    githubUrl: "https://github.com/rhanielmx/ticketing",
+    liveUrl: ""
+  }
 ];

@@ -20,7 +20,7 @@ export const projects: Project[] = [
     previewColor: "primary",
     icon: "wallet",
     githubUrl: "https://github.com/rhanielmx/magfinance",
-    liveUrl: "https://magfinance.vercel.app",
+    liveUrl: "https://magfinance-frontend.vercel.app",
   },
   {
     title: "Editor IPBIta",
@@ -59,7 +59,6 @@ export const projects: Project[] = [
     previewColor: "primary",
     icon: "pizza",
     githubUrl: "https://github.com/rhanielmx/pizzashop-web",
-    liveUrl: ""
   },
   {
     title: "ITG Conecta",
@@ -69,6 +68,5 @@ export const projects: Project[] = [
     previewColor: "primary",
     icon: "ticket",
     githubUrl: "https://github.com/rhanielmx/ticketing",
-    liveUrl: ""
   }
 ];

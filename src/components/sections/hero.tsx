@@ -12,7 +12,7 @@ export function Hero() {
               Rhaniel Xavier
             </h1>
             <p className="text-xl text-muted-foreground font-medium">
-              Software Engineer & Full-Stack Developer
+              Engenheiro de Software & Desenvolvedor Full Stack
             </p>
             <div className="bg-primary h-1 w-20 rounded-full" />
             <p className="text-base text-muted-foreground max-w-xl pt-1">

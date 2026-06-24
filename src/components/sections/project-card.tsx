@@ -49,7 +49,6 @@ const iconVariants = {
 
 interface ProjectCardProps {
   project: Project;
-  index: number;
 }
 
 function getInitials(title: string) {
@@ -62,11 +61,11 @@ function getInitials(title: string) {
     .toUpperCase();
 }
 
-export function ProjectCard({ project, index }: ProjectCardProps) {
+export function ProjectCard({ project }: ProjectCardProps) {
   const Icon = iconMap[project.icon];
 
   return (
-    <Link href={`?project=${index}`} scroll={false}>
+    <Link href={`/projetos/${project.slug}`} scroll={false}>
       <Card className="group overflow-hidden transition-shadow hover:shadow-md h-full">
         <div className="h-48 overflow-hidden">
           {project.coverImage ? (

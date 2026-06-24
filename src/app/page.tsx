@@ -1,10 +1,15 @@
-import { Suspense } from "react";
 import { Hero } from "@/components/sections/hero";
 import { ProjectGrid } from "@/components/sections/project-grid";
 import { ProjectDetail } from "@/components/sections/project-detail";
 import { Footer } from "@/components/sections/footer";
 
-export default function Home() {
+export default async function Home({
+  searchParams,
+}: {
+  searchParams: Promise<{ project?: string }>;
+}) {
+  const { project } = await searchParams;
+
   return (
     <>
       <Hero />
@@ -12,9 +17,7 @@ export default function Home() {
         <ProjectGrid />
       </main>
       <Footer />
-      <Suspense fallback={null}>
-        <ProjectDetail />
-      </Suspense>
+      <ProjectDetail projectParam={project ?? null} />
     </>
   );
 }

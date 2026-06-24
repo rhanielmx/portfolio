@@ -16,9 +16,9 @@ export function Hero() {
             </p>
             <div className="bg-primary h-1 w-20 rounded-full" />
             <p className="text-base text-muted-foreground max-w-xl pt-1">
-              Building web applications with modern technologies. Passionate
-              about creating clean, performant, and user-friendly digital
-              experiences.
+              Desenvolvedor Full Stack com foco em automação, integração de sistemas, APIs e ferramentas internas.
+              Atua com visão computacional, biometria e IA aplicada utilizando Python, TypeScript, React,
+              FastAPI e PostgreSQL.
             </p>
             <div className="flex gap-3 pt-2">
               <Button

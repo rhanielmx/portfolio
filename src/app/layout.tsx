@@ -17,13 +17,13 @@ const bodyFont = DM_Sans({
 });
 
 export const metadata: Metadata = {
-  title: "Rhaniel Xavier| Portfólio",
+  title: "Rhaniel Xavier | Portfólio",
   description:
-    "Portfólio de Rhaniel Xavier — Software Engineer & Full-Stack Developer. Conheça meus projetos pessoais e profissionais.",
+    "Portfólio de Rhaniel Xavier — Desenvolvedor Full Stack especializado em automação, integração de sistemas, APIs e IA aplicada.",
   openGraph: {
     title: "Rhaniel Xavier | Portfólio",
     description:
-      "Software Engineer & Full-Stack Developer. Conheça meus projetos.",
+      "Desenvolvedor Full Stack com foco em automação, visão computacional e IA aplicada. Conheça meus projetos.",
     url: "https://portfolio.rhanielmx.com",
     type: "website",
   },

@@ -1,6 +1,7 @@
 "use client";
 
 import Link from "next/link";
+import Image from "next/image";
 import {
   ShoppingCart,
   ListTodo,
@@ -67,16 +68,26 @@ export function ProjectCard({ project, index }: ProjectCardProps) {
   return (
     <Link href={`?project=${index}`} scroll={false}>
       <Card className="group overflow-hidden transition-shadow hover:shadow-md h-full">
-        <div
-          className={`${previewVariants[project.previewColor]} h-48 flex flex-col items-center justify-center gap-2`}
-        >
-          <span className="text-4xl font-bold tracking-tight text-white/90 drop-shadow-sm">
-            {getInitials(project.title)}
-          </span>
-          {Icon && (
-            <Icon
-              className={`${iconVariants[project.previewColor]} h-5 w-5 opacity-50`}
+        <div className="h-48 overflow-hidden">
+          {project.coverImage ? (
+            <Image
+              src={project.coverImage}
+              alt={project.title}
+              width={800}
+              height={400}
+              className="h-full w-full object-cover transition-transform duration-300 group-hover:scale-105"
             />
+          ) : (
+            <div className={`${previewVariants[project.previewColor]} h-full flex flex-col items-center justify-center gap-2`}>
+              <span className="text-4xl font-bold tracking-tight text-white/90 drop-shadow-sm">
+                {getInitials(project.title)}
+              </span>
+              {Icon && (
+                <Icon
+                  className={`${iconVariants[project.previewColor]} h-5 w-5 opacity-50`}
+                />
+              )}
+            </div>
           )}
         </div>
         <CardHeader>

@@ -5,7 +5,8 @@ export interface Project {
   tags: string[];
   previewColor: "primary" | "secondary" | "accent";
   icon: string;
-  image?: string;
+  coverImage?: string;
+  images?: string[];
   liveUrl?: string;
   githubUrl?: string;
 }
@@ -19,6 +20,15 @@ export const projects: Project[] = [
     tags: ["React", "TypeScript", "Fastify", "PostgreSQL", "Drizzle ORM"],
     previewColor: "primary",
     icon: "wallet",
+    coverImage: "/projects/magfinance/dashboard.png",
+    images: [
+      "/projects/magfinance/dashboard.png",
+      "/projects/magfinance/transactions.png",
+      "/projects/magfinance/categories.png",
+      "/projects/magfinance/contas_fixas.png",
+      "/projects/magfinance/installments.png",
+      "/projects/magfinance/planning.png",
+    ],
     githubUrl: "https://github.com/rhanielmx/magfinance",
     liveUrl: "https://magfinance-frontend.vercel.app",
   },
@@ -30,6 +40,14 @@ export const projects: Project[] = [
     tags: ["Tauri", "React", "TypeScript", "Python", "Whisper", "Rust"],
     previewColor: "secondary",
     icon: "video",
+    coverImage: "/projects/editor-ipbita/timeline.png",
+    images: [
+      "/projects/editor-ipbita/timeline.png",
+      "/projects/editor-ipbita/chapters.png",
+      "/projects/editor-ipbita/settings.png",
+      "/projects/editor-ipbita/upload.png",
+      "/projects/editor-ipbita/upload_done.png",
+    ],
     githubUrl: "https://github.com/rhanielmx/editor-ipbita",
   },
   {
